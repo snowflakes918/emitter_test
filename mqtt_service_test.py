@@ -7,14 +7,14 @@ import tkinter
 emitter = Client()
 root = tkinter.Tk()
 
-channel_key = tkinter.StringVar(root, value="c6lw-54bbzwDfObeTHD3ikSAcEdHkfum")
-channel = tkinter.StringVar(root, value="simcloud/devices/1234/")
-text_message = tkinter.StringVar(root, value="Hello TAD sim")
+channel_key = tkinter.StringVar(root, value="input password")
+channel = tkinter.StringVar(root, value="input channel")
+text_message = tkinter.StringVar(root, value="Hello world")
 
 
 
 def connect():
-    emitter.connect(host="120.232.27.27", port=8080, secure=False)
+    emitter.connect(host="api.emitter.io", port=8080, secure=False)
     # emitter.connect()
 
     emitter.on_connect = lambda: result_text.insert("0.0", "Connected\n\n")
